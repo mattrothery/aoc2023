@@ -1,10 +1,13 @@
 number_words = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
+
 def find_left(line, word):
     return line.find(word)
 
+
 def find_right(line, word):
     return line.rfind(word)
+
 
 def first_and_last(line):
     left = 0
@@ -19,9 +22,10 @@ def first_and_last(line):
             if not line[right].isdigit():
                 right -= 1
 
+
 def main():
     # read each line of input file
-    with open('input.txt', 'r') as f:
+    with open("input.txt", "r") as f:
         lines = f.readlines()
 
     total = 0
@@ -45,15 +49,15 @@ def main():
 
         if left_word != "":
             left = str(number_words.index(left_word) + 1)
-        
+
         if right_word != "":
             right = str(number_words.index(right_word) + 1)
 
-        
         num = str(left) + str(right)
         total += int(num)
 
     print(total)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

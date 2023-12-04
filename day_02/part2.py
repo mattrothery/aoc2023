@@ -5,11 +5,10 @@ def main():
     power_sum = 0
 
     for line in lines:
-
         game = line.split(":")[1]
         game = game.split(";")
 
-        game_dict = {'red': 0, 'green': 0, 'blue': 0}
+        game_dict = {"red": 0, "green": 0, "blue": 0}
 
         for draw in game:
             draw = draw.split(",")

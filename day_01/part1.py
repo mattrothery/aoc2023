@@ -11,9 +11,10 @@ def first_and_last(line):
             if not line[right].isdigit():
                 right -= 1
 
+
 def main():
     # read each line of input file
-    with open('input.txt', 'r') as f:
+    with open("input.txt", "r") as f:
         lines = f.readlines()
 
     total = 0
@@ -24,6 +25,6 @@ def main():
 
     print(total)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
-                

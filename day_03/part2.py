@@ -38,18 +38,15 @@ def get_adjacent(schematic, x, y):
 def main():
     engine = read_schematic("input.txt")
     symbols = locate_symbols(engine)
-    # print(symbols)
 
     total_ratio = 0
     for key, val in symbols.items():
         if val == "*":
             adjacent = get_adjacent(engine, key[0], key[1])
-            # print(f'line: {key[1]+1}, col: {key[0]+1}, adjacents: {adjacent}')
 
             if len(adjacent) == 2:
                 ratio = adjacent.pop() * adjacent.pop()
                 total_ratio += ratio
-
 
     print(total_ratio)
 
